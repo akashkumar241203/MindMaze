@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assests/favicon.svg">
+  </head>
+  <body>
+    <main>
+      <div class="homepage">
+        <h3 class="app-name">MindMaze - The Quiz Game</h3>
+        <hr>
+        <div class="game-config">
+          <select name="level" id="level" class="level-select">
+            <option value="0">Select Level</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+  
+          <select name="totalQuestions" id="totalQuestions" class="ques-select">
+            <option value="0">Select Number of Questions</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+
+        <button class="playBtn">
+          <img src="assests/play.svg" alt="play" class="play-img">
+          <h2>Play</h2>
+        </button>
+      </div>
+
+      <div class="quiz-app">
+        <div class="quiz-header">
+          <div class="header-content">
+            <h1 class="title">MindMaze</h1>
+            <div class="timer">
+              Time-Left <span class="timer-value"></span>
+            </div>
+          </div>
+          <div class="quiz-progress"></div>
+        </div>
+
+        <div class="question-container">
+          <h2 class="question"> <span class="currentQ"></span> </h2>
+          <div class="quiz-options">
+            <!-- here all the option element will be added dynamically -->
+          </div>
+        </div>
+
+        <hr />
+        <div class="questions-remaining">
+          <span class="currentQ"></span> of
+          <span class="totalQ"></span> Questions
+        </div>
+      </div>
+
+      <div class="question-answer-container">
+        <div class="summary-header">
+          <h1 class="title">MindMaze</h1>
+          <div style="display: flex; gap: 6px;">
+            <div class="reloadContainer">
+              <button class="reloadBtn">Restart <img src="assests/restart.svg" alt="restart" class="restart"> </button>
+            </div>
+            <span class="score timer"></span>
+          </div>
+        </div>
+
+        <div class="inner-container">
+
+        </div>
+        <!-- here ques along with there correct answer will be shown -->
+      </div>
+    </main>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
